@@ -100,7 +100,7 @@
 //                 break;
 //         }
 //         break;
-//     case null:  
+//     case null:
 //         console.log("Отменено");
 //         break;
     
@@ -108,3 +108,35 @@
 //         console.log("Я вас не знаю");
 //         break;
 // }
+// Напишите цикл, который предлагает ввести
+//число больше 100 через prompt.
+//Если если посетитель ввёл другое число - попросить
+//ввести ещё раз и так далее.
+//Цикл должет спрашивать число, пока посетитель не
+//введёт число больше 100, либо не нажмет кнопку
+//Отмена в prompt
+
+// let numberInput = prompt("Введите число больше 100");
+
+// // while (numberInput < 100) {
+// //     numberInput = prompt("Введите число больше 100");
+// // }
+
+// // console.log(numberInput);
+
+// let check = false;
+
+// do {
+//     if (numberInput === null) {
+//         check = false;
+//     }
+//     else if (numberInput < 100) {
+//         check = true;
+//         numberInput = prompt("Введите число больше 100");
+//     }
+//     else {
+//         check = false;
+//     }
+// } while (check);
+
+// console.log(numberInput);
