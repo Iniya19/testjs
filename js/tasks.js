@@ -38,14 +38,14 @@
 
 // for (let i = max; i >= min; i -= 1) {
 //     if (i % 2 !== 0) {
-        
+
 //         continue
-    
+
 //     }
 //     total += i;
 //      console.log(i);
 // }
-    
+
 // console.log(total);
 
 
@@ -92,18 +92,18 @@
 //             case "Я главный":
 //                 console.log("Здравствуйте!");
 //                 break;
-            // case null:
-            //     console.log("Отменено");
-            //     break;
-            // default:
-            //     console.log("Неверный пароль!");
+// case null:
+//     console.log("Отменено");
+//     break;
+// default:
+//     console.log("Неверный пароль!");
 //                 break;
 //         }
 //         break;
 //     case null:
 //         console.log("Отменено");
 //         break;
-    
+
 //     default:
 //         console.log("Я вас не знаю");
 //         break;
@@ -140,3 +140,93 @@
 // } while (check);
 
 // console.log(numberInput);
+
+//FizzBuzz function
+
+// let numbers = 23;
+// function FizzBuzz(theArray) {
+
+//     for (let i = 1; i <= numbers; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             console.log("FizzBuzz");
+//         }
+//         else if (i % 3 === 0) {
+//             console.log("Fizz");
+//         }
+//         else if (i % 5 === 0) {
+//             console.log("Buzz");
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// }
+
+// FizzBuzz(numbers);
+
+//Check for Polyndrom - 1 method
+
+// let string = "Лёша на полке клопа нашёл";
+// let stringSplitted = string
+//     .toLowerCase()
+//     .split(" ")
+//     .join("");
+
+
+// let reversedString = string
+//     .toLowerCase()
+//     .replace(/\s/g, '')
+//     .split(" ")
+//     .reverse()
+//     .join("");
+
+
+// if (reversedString === stringSplitted) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
+
+
+// // let reversedString = stringArr.reverse();
+// // if (reversedString === stringArr) {
+// //     console.log(theString);
+// // }
+
+
+// console.log(string);
+// console.log(theString);
+
+//Check for Polyndrom - 2-nd method;
+
+// let string = "Лёша на полке клопа нашёл"
+//     .replaceAll(" ", "")
+//     .toLowerCase()
+//     .split("");
+// let reversedString = string.reverse();
+
+// for (let i = 0; i <= string.length; i++) {
+//     if (string.includes(reversedString[i])) {
+//         console.log(true);
+//     } else {
+//         false;
+//     }
+// }
+
+//Check for Polyndrom - 3-nd method;
+
+// let a = "Лёша на полке клопа нашёл".toLowerCase().replace(/\s/g, "").split("");
+// console.log(a);
+// let b = "Лёша на полке клопа нашёл".toLowerCase().replace(/\s/g, "").split("").reverse();
+// console.log(b);
+
+// const c = [...a, ...b];
+
+// let aFiltered = a.filter((element, index) => element === c[index]).length;
+// let bFiltered = b.filter((element, index) => element === c[index]).length;
+
+
+// if (a.length === b.length && aFiltered && bFiltered) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
