@@ -274,20 +274,20 @@
 //     //     document.body.style.background = color;
 //     //     return
 //     // }
-    
+
 //     // console.error('Такой цвет не найден');
 //     // document.body.style.background = 'red';
 
 //     const inArray = colors.find(element => element === color)
-    
+
 //     document.body.style.background = inArray ? inArray : 'red';
 
 
 //     if (!inArray) {
 //         console.error('Такой цвет не найден');
-    
+
 //     }
-    
+
 
 
 
@@ -310,11 +310,62 @@
 
 // function calcTotalPrice(stones, stonesName) {
 //     for (const {name, price, quantity} of stones) {
-//         if (name === stonesName) { 
+//         if (name === stonesName) {
 //             return price * quantity;
 //         }
-//     }  
+//     }
 //     }
 // console.log(calcTotalPrice(stones, 'Щебень'));
 
 
+//Finish the callback function for consoles logs to work properly
+// function one(callback) {
+//     return callback ? callback(1) : 1;
+// }
+// function two(callback) {
+//     return callback ? callback(2) : 2;
+// }
+// function three(callback) {
+//     return callback ? callback(3) : 3;
+// }
+// function four(callback) {
+//     return callback ? callback(4) : 4;
+// }
+// function five(callback) {
+//     return callback ? callback(5) : 5;
+// }
+// function six(callback) {
+//     return callback ? callback(6) : 6;
+// }
+// function seven(callback) {
+//     return callback ? callback(7) : 7;
+// }
+// function eight(callback) {
+//     return callback ? callback(8) : 8;
+// }
+// function nine(callback) {
+//     return callback ? callback(9) : 9;
+// }
+
+// function plus(a) {
+//     return (b) => a + b;
+// }
+// function minus(a) {
+//     return (b) => a - b;
+// }
+// function divide(a) {
+//     return (b) => b / a;
+// }
+// function mult(a) {
+//     return (b) => b * a;
+// }
+
+// console.log(one(plus(three()))); // 4
+// console.log(four(mult(three()))); // 12
+// console.log(four(divide(two()))); // 2
+
+// Напишите функцию для хранения скидки.Функция возвращает
+//другую функцию, которая принимает сумму покупки
+//и возвращает финальную сумму с сохраненной скидкой.
+//const discountPremium = saveDiscount(50);
+// console.log(discountPremium(1000));
