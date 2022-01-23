@@ -230,3 +230,26 @@
 // } else {
 //     console.log(false);
 // }
+
+//Напишите функцию caculculateAverage()
+//которая принимает произвольное количество
+//аргументов и возвращает их среднее значение.
+//Добавить проверку, что аргументы это числа.
+
+function caculculateAverage () {
+
+    const args = [...arguments];
+
+
+    let total = 0;
+    let count = 0;
+
+    args.forEach(number => {
+        if (typeof number === 'number') {
+            total += number;
+            count += 1;
+        }
+    })
+    console.log(total / count);
+}
+caculculateAverage(1, 5, 8, 2, "z", "c");
