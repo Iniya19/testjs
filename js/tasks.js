@@ -363,3 +363,9 @@
 // console.log(one(plus(three()))); // 4
 // console.log(four(mult(three()))); // 12
 // console.log(four(divide(two()))); // 2
+
+// Напишите функцию для хранения скидки.Функция возвращает
+//другую функцию, которая принимает сумму покупки
+//и возвращает финальную сумму с сохраненной скидкой.
+//const discountPremium = saveDiscount(50);
+// console.log(discountPremium(1000));
