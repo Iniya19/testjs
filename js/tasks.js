@@ -236,20 +236,62 @@
 //аргументов и возвращает их среднее значение.
 //Добавить проверку, что аргументы это числа.
 
-function caculculateAverage () {
+// function caculculateAverage () {
 
-    const args = [...arguments];
+//     const args = [...arguments];
 
 
-    let total = 0;
-    let count = 0;
+//     let total = 0;
+//     let count = 0;
 
-    args.forEach(number => {
-        if (typeof number === 'number') {
-            total += number;
-            count += 1;
-        }
-    })
-    console.log(total / count);
-}
-caculculateAverage(1, 5, 8, 2, "z", "c");
+//     args.forEach(number => {
+//         if (typeof number === 'number') {
+//             total += number;
+//             count += 1;
+//         }
+//     })
+//     console.log(total / count);
+// }
+// caculculateAverage(1, 5, 8, 2, "z", "c");
+
+
+
+//Напишите функцию findTheColor()
+//которая принимает название цвета
+//определяет его наличие в массиве
+//если цвет есть, усталавливет его как фон документа
+//если цвета нет выводит console.error('Такой цвет не найден');
+//и устанавливает цвет документа красный
+// document.body.style.background = 'red';
+
+
+// const colors = ['blue', 'yellow', 'olive', 'fuchsia', 'lime', 'aqua', 'maroon']
+
+
+// const findTheColor = (color) => {
+
+//     // if (colors.includes(color)) {
+//     //     document.body.style.background = color;
+//     //     return
+//     // }
+    
+//     // console.error('Такой цвет не найден');
+//     // document.body.style.background = 'red';
+
+//     const inArray = colors.find(element => element === color)
+    
+//     document.body.style.background = inArray ? inArray : 'red';
+
+
+//     if (!inArray) {
+//         console.error('Такой цвет не найден');
+    
+//     }
+    
+
+
+
+// console.log(inArray);
+// }
+
+// findTheColor('red')
