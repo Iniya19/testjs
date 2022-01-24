@@ -369,3 +369,14 @@
 //и возвращает финальную сумму с сохраненной скидкой.
 //const discountPremium = saveDiscount(50);
 // console.log(discountPremium(1000));
+
+// const calcDiscount = function (discount) {
+//     const calcTotal = function (sum) {
+//         let result = sum * (discount / 100);
+//         return result;
+//     }
+//     return calcTotal;
+// }
+
+// const discountPremium = calcDiscount(50);
+// console.log(discountPremium(1000));
