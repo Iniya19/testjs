@@ -369,3 +369,287 @@
 //и возвращает финальную сумму с сохраненной скидкой.
 //const discountPremium = saveDiscount(50);
 // console.log(discountPremium(1000));
+
+// const calcDiscount = function (discount) {
+//     const calcTotal = function (sum) {
+//         let result = sum * (discount / 100);
+//         return result;
+//     }
+//     return calcTotal;
+// }
+
+// const discountPremium = calcDiscount(50);
+// console.log(discountPremium(1000));
+
+// formElementState();
+//Task-1
+// const people = [
+//     {
+//         name: 'Alex',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Jhon',
+//         know: [],
+//     },
+//     {
+//         name: 'Eva',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Ivan',
+//         know: ['Jhon', 'Eva'],
+//     },
+// ];
+
+// //нарцис  'Jhon'
+
+// const people1 = [
+//     {
+//         name: 'Alex',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Jhon',
+//         know: [],
+//     },
+//     {
+//         name: 'Eva',
+//         know: [],
+//     },
+//     {
+//         name: 'Ivan',
+//         know: ['Jhon', 'Eva'],
+//     },
+// ];
+
+// //немає нарциса'
+
+// const people3 = [
+//     {
+//         name: 'Alex',
+//         know: ['Alex', 'Eva'],
+//     },
+//     {
+//         name: 'Jhon',
+//         know: [],
+//     },
+//     {
+//         name: 'Eva',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Ivan',
+//         know: ['Jhon', 'Eva'],
+//     },
+// ];
+
+// //немає нарциса
+
+// const people4 = [
+//     {
+//         name: 'Alex',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Jhon',
+//         know: ['Eva'],
+//     },
+//     {
+//         name: 'Eva',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Ivan',
+//         know: ['Jhon', 'Eva'],
+//     },
+// ];
+
+// //немає нарциса'
+// function findNarcissius(peopleList) {
+
+//     let message = `No narcissius`;
+
+//     const thePerson = peopleList.find(item => item.know.length === 0);
+
+//     if (!thePerson) {
+//         return console.log(message);
+//     }
+
+//     const IsWithoutJohn = peopleList.filter(item => item.name !== thePerson.name);
+
+//     const ifPresentOnList = IsWithoutJohn.every((item) =>
+//         item.know.includes(thePerson.name));
+
+//     message = ifPresentOnList ? `Narcis ${thePerson.name}` : message;
+//     console.log(message);
+
+
+// }
+// findNarcissius(people4);
+
+
+// findNarcissius(people);
+
+// findNarcissius(people1);
+
+// findNarcissius(people3);
+
+// function findName(peopleList, callback) {
+//     // let narcissiusName = "";
+//     for (const { know, name } of peopleList) {
+//         if (know.length === 0) {
+//             return callback(name, peopleList);
+//         }
+
+//     }
+//     return console.log(`No narcissius`);
+// }
+
+// function findNarcissius(narcissiusName, peopleList) {
+//     for (const { know, name } of peopleList) {
+//         if (narcissiusName === name) {
+//             continue;
+//         }
+//         if (!know.includes(narcissiusName)) {
+
+//             return console.log(`No narcissius`)
+//         }
+//     }
+//     console.log(`Narcisiuss ${narcissiusName}`);
+// }
+// findName(people, findNarcissius);
+// findName(people1, findNarcissius);
+// findName(people3, findNarcissius);
+// findName(people4, findNarcissius);
+
+// findNarcissius(people4);
+
+
+// Task - 2
+// const a = [121, 144, 19, 161, 19, 144, 19, 11];
+// const b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
+
+// function sortArrays(a, b) {
+
+//     if (a.length !== b.length) {
+//         console.log(`Arrays ain't equal`);
+//     }
+
+
+//     const arrCalc = a.map((item) => Math.pow(item, 2));
+
+//     const sortArr = [...arrCalc].sort((a, b) => a - b);
+
+
+//     const sortB = [...b].sort((a, b) => a - b);
+
+
+//     for (let i = 0; i < sortArr.length; i++) {
+//         if (sortArr[i] !== sortB[i]) {
+//             return false
+//         }
+
+//     }
+
+//     return true
+
+// }
+
+
+// console.log(sortArrays(a, b));
+
+//Task-3
+//Создать небольшую игру:)
+// - Изначально на экране пользователя будет отображаться
+//какая - то форма (круг, квадрат, прямоулольник)
+// - При нажатии на нее в рандомном порядке форма должна
+//меняться на другую
+// - Форма каждый раз должна появляться в разных местах на странице
+// - Цвет формы в рандомном порядке меняется,
+
+
+
+// const forms = [
+//     'width: 100px; height: 100px; border-width: 1px; border-color: #000000',
+//     'width: 100px; height: 100px; border-radius: 50%; border-width: 1px; border-color: #000000',
+//     'width: 150px; height: 100px; border-width: 1px; border-color: #000000',
+//     'width: 200px; height: 100px; border-radius: 100px / 50px;',
+//     'width: 150px; height: 100px; transform: skew(20deg);',
+// ];
+// function getRandomHexColor() {
+//     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
+
+// const randomither = max => {
+//     return Math.floor(Math.random() * max);
+// };
+
+// const body = document.querySelector('body');
+
+// const formElement = document.createElement('div');
+
+// // formElement.style.cssText = forms[randomither(forms.length - 1)];
+// // formElement.style.backgroundColor = getRandomHexColor();
+
+
+// // body.append(formElement);
+
+// formElement.addEventListener('click', formElementState)
+
+// function formElementState() {
+//     formElement.style.cssText = forms[randomither(forms.length - 1)];
+
+//     formElement.style.backgroundColor = getRandomHexColor();
+//     formElement.style.position = 'absolute';
+
+//     let height = 100 - (formElement.clientHeight * 100) / document.documentElement.clientHeight;
+//     console.log(height);
+
+//     let width = 100 - (formElement.clientWidth * 100) / document.documentElement.clientWidth;
+//     console.log(width);
+
+//     formElement.style.left = `${randomither(width)}%`;
+//     formElement.style.top = `${randomither(height)}%`;
+// }
+
+//Task-4
+//Создать маркированный список.
+//Создать кнопки "Add" "Remove", которые будут менять состав списка
+//Создать input с которого будем получать значение, которое будет в li
+//* Четным li указать красный фон, нечетным -- синим
+//Для выполнения задания используйте createElement
+
+// const olList = document.createElement('ol');
+// const addBtn = document.createElement('button');
+// addBtn.textContent = 'ADD';
+// const removeBtn = document.createElement('button');
+// removeBtn.textContent = 'REMOVE';
+// const input = document.createElement('input');
+
+// body.append(olList, addBtn, removeBtn, input);
+
+// addBtn.addEventListener('click', () => {
+//     console.log(input.value);
+
+//     const createLi = document.createElement('li');
+//     createLi.textContent = input.value ? input.value : `No content`;
+
+//     olList.append(createLi);
+
+//     const childrenLength = olList.children.length;
+//     console.log(childrenLength);
+
+//     const isEven = childrenLength % 2 === 0;
+
+//     createLi.classList.add(isEven ? 'even' : 'odd');
+
+//     input.value = "";
+// })
+
+// removeBtn.addEventListener('click', () => {
+//     if (!olList.hasChildNodes()) {
+//         return;
+//     }
+//     olList.removeChild(olList.lastElementChild);
+// })
